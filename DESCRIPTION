@@ -1,0 +1,18 @@
+Package: spanishRpoblacion
+Type: Package
+Title: Proporciona datos de poblacion para entidades españolas (provenientes del padron INE)
+Version: 0.1.0
+Authors@R: person("Pedro J.", "Perez", , "pedro.j.perez@uv.es", c("aut", "cre"))
+Maintainer: Pedro J. Perez <pjperez@uv.es>
+Description: Datos de poblacion provenientes del Padron del INE
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+URL: https://github.com/perezp44/spanishRpoblacion
+BugReports: https://github.com/perezp44/spanishRpoblacion/issues
