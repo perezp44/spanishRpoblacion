@@ -1,4 +1,4 @@
-#- me da x mirar datos del padron Continuo y acabao bajandome todos
+#- me da x mirar datos del padron Continuo y acabo bajandome todos
 
 library(stringr)
 library(readr)
@@ -6,22 +6,17 @@ library(tidyverse)
 library(personal.pjp)   #- personal packages
 library(readxl)
 library(readr)
-#devtools::install_github("ropensci/writexl")  #- lo instalamos
-library(writexl)                              #- lo cargamos en memoria
-library(stringi)
-
-
+library(usethis)
 
 #------------------------------- SI, ya es PADRON CONTINUO
 #- son microdatos, cada registro tiene 102 caracteres para conformar 5 varibles
 
 
-#- DICCIONARIO
+#- DICCIONARIOs
 dicc_1 <- read_excel("./data-raw/datos_Padron_Continuo/DisenioRegistro.xls", skip = 3, sheet = "dicc_pjp")   #- las def. de las variables
 dicc_2 <- read_excel("./data-raw/datos_Padron_Continuo/DisenioRegistro.xls", sheet = "dicc_pjp_2")   #- las def. de las variables
 
 #- files with data
-
 aa <- list.files("./data-raw/datos_Padron_Continuo/datos/") #- un vector con los nombres de los ficheros de datos
 #- reading the data   #- only basers use list.files ; usa dir()
 
@@ -32,13 +27,9 @@ for (ii in 2:length(aa)){
 }
 rm(aa,bb,ii)
 #--------- OK, leidos
-df_copy <- df   #- 1.219.020 registros
-#------------
-
 
 #-- sacar codigos
 df <- df %>% mutate(anyo = str_extract(anyo, "^(....)")) #- ok anyo está ok
-#df <- df %>% mutate(Code_unidad_poblacional = str_extract(anyo, "^(....)")) #- ok anyo está ok
 
 for (ii in 1:5){
   df <- df %>% mutate(!!as.character(dicc_1[ii,1]) := substr(X1, dicc_1[ii,3], dicc_1[ii,4]))            #- sexo: 1= H, 6 = M
@@ -57,24 +48,28 @@ df <- df %>% map(str_trim, side = "both") %>% as_tibble() #- quito espacios en b
 # https://es.wikipedia.org/wiki/Entidad_singular_de_poblaci%C3%B3n
 #Las entidades y los núcleos de población están codificados por el Instituto Nacional de Estadística desde el año 1981. Este código está formado por 11 dígitos: (Hay mas explicacion)
 #Los códigos se restablecieron en el año 1991 siguiendo el orden alfabético de los núcleos de población dentro de cada entidad singular. A las entidades de nueva creación se les asigna un código correlativo al último existente, y no se reutilizan los de las que desaparecen. Los ayuntamientos deben revisar, al menos una vez al año, la relación de entidades y núcleos de población, y enviarla al Instituto Nacional de Estadística, que las publica anualmente.
-
 # Esta relación sirve de base para la confección del padrón municipal de habitantes.
 
 #- variable que señalice que es cada row (municipio, colectivo etc...
 aa <- df %>% filter(anyo == "2017") %>% filter(Provincia == 44) %>% filter(Municipio == 177) #- PANCRUDO
 
 df <- df %>% mutate(TIPO = "44")
-
 df <- df %>% mutate(TIPO = if_else(str_detect(Code_unidad_poblacional, "(000000)$"), "Municipio", TIPO)) #- Marco municipios
 df <- df %>% mutate(TIPO = if_else(Entidad_colectiva != "00", "Entidad colectiva", TIPO))                #- marco Entidad Colectiva
 df <- df %>% mutate(TIPO = if_else(Entidad_singular != "00", "Entidad singular", TIPO))                  #- marco Entidad singular
 df <- df %>% mutate(TIPO = if_else(Nucleo_o_diseminado != "00" & Nucleo_o_diseminado != "99", "Nucleos", TIPO))    #- Nucleos
 df <- df %>% mutate(TIPO = if_else(str_detect(Code_unidad_poblacional, "(99)$"), "Diseminados", TIPO))             #- Diseminados
 
+#- reordeno las variables
+INE_padron_10_17 <- df %>% select(Municipio, Provincia, Nombre_unidad_poblacional, TIPO, anyo, Poblacion_Total, Poblacion_H, Poblacion_M, everything())
+
+# use_data(INE_padron_10_17) #- lo guarde con esta linea que usa el pkg usethis el 2018-02-06
+
+dput(aa)
 
 
-
-
+#--------------- LO DE ABAJO YA SON CALCULOS
+#--------------- LO DE ABAJO YA SON CALCULOS no sse usan al guardar los datos en el pkg
 
 
 

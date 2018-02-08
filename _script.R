@@ -4,7 +4,7 @@
 
 library(usethis)
 #---------------- has de elegir un nombre para el pkg
-name_of_the_pkg <- "spanishRshapes"
+name_of_the_pkg <- "spanishRpoblacion"
 #path <- paste0("C:/Users/perezp/Desktop/a_GIT_2016a/", name_of_the_pkg)
 #create_package(path, rstudio = TRUE)
 
@@ -49,7 +49,6 @@ use_git(message = "Primer commit")           #- activa GIT. se reinicia RStudio,
 
 #---------------------------- GITHUB
 library(usethis)
-use_github(protocol = "https") #- AQUI sale un error
 use_github_labels()  #- labelling issues
 use_github_links()   #- añade links en la file DESCRIPTION
 

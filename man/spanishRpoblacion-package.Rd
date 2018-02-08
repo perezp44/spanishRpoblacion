@@ -4,9 +4,9 @@
 \name{spanishRpoblacion-package}
 \alias{spanishRpoblacion}
 \alias{spanishRpoblacion-package}
-\title{spanishRpoblacion: Proporciona datos de poblacion para entidades espaÃ±olas (provenientes del padron INE)}
+\title{spanishRpoblacion: Proporciona datos de poblacion para municipios (y entidades) para los aÃ±os 2010 a 2017 (provenientes del padron INE)}
 \description{
-Datos de poblacion provenientes del Padron del INE
+Proporciona datos de poblacion provenientes del Padron del INE para los aÃ±os 2010 a 2017
 }
 \seealso{
 Useful links:

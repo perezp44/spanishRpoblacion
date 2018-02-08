@@ -1,10 +1,10 @@
 Package: spanishRpoblacion
 Type: Package
-Title: Proporciona datos de poblacion para entidades españolas (provenientes del padron INE)
+Title: Proporciona datos de poblacion para municipios (y entidades) para los años 2010 a 2017 (provenientes del padron INE)
 Version: 0.1.0
 Authors@R: person("Pedro J.", "Perez", , "pedro.j.perez@uv.es", c("aut", "cre"))
 Maintainer: Pedro J. Perez <pjperez@uv.es>
-Description: Datos de poblacion provenientes del Padron del INE
+Description: Proporciona datos de poblacion provenientes del Padron del INE para los años 2010 a 2017
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

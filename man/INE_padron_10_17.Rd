@@ -11,13 +11,13 @@
 \item Code_Unidad_poblacional: Pancrudo = 44177000000
 \item Nombre_Unidad_poblacional: PANCRUDO
 \item Poblacion_Total: Poblacion Total
-\item Pobalcion_H: Hombres
+\item Poblacion_H: Hombres
 \item Poblacion_M: Mujeres
 \item Provincia: PANCRUDO esta en Teruel = 44
 \item Municipio: Codigo INE municipio Pancrudo = 177
-\item Entidad_colectiva:
-\item Entidad_singular:
-\item Nucleo_o_diseminado:
+\item Entidad_colectiva: codigo de 2 digitos
+\item Entidad_singular: codigo de 2 digitos
+\item Nucleo_o_diseminado: codigo de 2 digitos
 \item TIPO:    Municipios, Entidad Singular, Nucleos ....
 }}
 \source{
