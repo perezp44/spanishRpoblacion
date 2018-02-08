@@ -8,27 +8,12 @@ Es un paquete de datos. Simplemente contiene los datos de población del Padrón
 Información
 ===========
 
-El INE tiene información detallada [aquí](http://www.ine.es/nomen2/Metodologia.do).
-
-del diseño de registro. Para entenderlo yo algún día uso los datos de mi pueblo.
+El INE tiene información detallada [aquí](http://www.ine.es/nomen2/Metodologia.do) del diseño de registro. Yo para entenderlo usé los datos referentes a mi pueblo, lo muestro abajo.
 
 Mi pueblo
 =========
 
 Mi pueblo es Pancrudo, en la provincia de Teruel. Es mi pueblo, pero para el INE es un municipio compuesto de 4 núcleos: Pancrudo, Portalrubio, Cervera del rincón y Cuevas de Portalrubio. Veamos sus registros para 2017
-
-    #> Warning: package 'tidyverse' was built under R version 3.4.3
-    #> -- Attaching packages --------------------------------------------------------------- tidyverse 1.2.1 --
-    #> v ggplot2 2.2.1.9000     v purrr   0.2.4     
-    #> v tibble  1.4.2          v dplyr   0.7.4     
-    #> v tidyr   0.8.0          v stringr 1.2.0     
-    #> v readr   1.1.1          v forcats 0.2.0
-    #> Warning: package 'tidyr' was built under R version 3.4.3
-    #> Warning: package 'purrr' was built under R version 3.4.3
-    #> Warning: package 'dplyr' was built under R version 3.4.2
-    #> -- Conflicts ------------------------------------------------------------------ tidyverse_conflicts() --
-    #> x dplyr::filter() masks stats::filter()
-    #> x dplyr::lag()    masks stats::lag()
 
 | X1                                     | Code\_unidad\_poblacional | Nombre\_unidad\_poblacional | Poblacion\_Total |
 |:---------------------------------------|:--------------------------|:----------------------------|:-----------------|
@@ -42,7 +27,7 @@ Mi pueblo es Pancrudo, en la provincia de Teruel. Es mi pueblo, pero para el INE
 | 44177000400PORTALRUBIO 18 11 7         | 44177000400               | PORTALRUBIO                 | 18               |
 | 44177000401PORTALRUBIO 18 11 7         | 44177000401               | PORTALRUBIO                 | 18               |
 
-Como veis, mi pueblo tenía en 2017 77 habitantes, pero el municipio de Pancrudo tenía 119 (somos grandes!!)
+Mi pueblo tenía en 2017, como podéis ver en la tabla, 77 habitantes, pero el municipio de Pancrudo tenía 119 (somos grandes!!)
 
 Para entender la codificación lo mejor es ir al diseño de registro, pero en [este articulo de la Wiki](https://es.wikipedia.org/wiki/Entidad_singular_de_poblaci%C3%B3n) lo explican bien.
 

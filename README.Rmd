@@ -9,7 +9,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "95%", message = FALSE, warning = FALSE
 )
 ```
 # spanishRpoblacion
@@ -20,9 +20,7 @@ Así que los datos en realidad provienen del  **[Nomenclátor: Población del Pa
 
 # Información
 
-El INE tiene información detallada [aquí](http://www.ine.es/nomen2/Metodologia.do). 
-
-del diseño de registro. Para entenderlo yo algún día uso los datos de mi pueblo.
+El INE tiene información detallada [aquí](http://www.ine.es/nomen2/Metodologia.do) del diseño de registro. Yo para entenderlo usé los datos referentes a mi pueblo, lo muestro abajo.
 
 
 # Mi pueblo
@@ -74,7 +72,7 @@ knitr::kable(bb)
 
 ```
 
-Como veis, mi pueblo tenía en 2017 77 habitantes, pero el municipio de Pancrudo tenía 119 (somos grandes!!)
+Mi pueblo tenía en 2017, como podéis ver en la tabla, 77 habitantes, pero el municipio de Pancrudo tenía 119 (somos grandes!!)
 
 Para entender la codificación lo mejor es ir al diseño de registro, pero en [este articulo de la Wiki](https://es.wikipedia.org/wiki/Entidad_singular_de_poblaci%C3%B3n) lo explican bien.
 
