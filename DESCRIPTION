@@ -4,10 +4,11 @@ Title: Proporciona datos de poblacion para municipios (y entidades) para los añ
 Version: 0.1.0
 Authors@R: person("Pedro J.", "Perez", , "pedro.j.perez@uv.es", c("aut", "cre"))
 Maintainer: Pedro J. Perez <pjperez@uv.es>
-Description: Proporciona datos de poblacion provenientes del Padron del INE para los años 2010 a 2017
+Description: spanishRpoblacion gives data de poblacion provenientes del Padron del INE para los años 2010 a 2017.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 2.10)
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1
 Suggests: 
