@@ -65,7 +65,9 @@ INE_padron_10_17 <- df %>% select(Municipio, Provincia, Nombre_unidad_poblaciona
 
 # use_data(INE_padron_10_17) #- lo guarde con esta linea que usa el pkg usethis el 2018-02-06
 
-dput(aa)
+
+
+
 
 
 #--------------- LO DE ABAJO YA SON CALCULOS

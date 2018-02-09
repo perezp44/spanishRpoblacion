@@ -3,7 +3,7 @@
 \docType{data}
 \name{INE_padron_10_17}
 \alias{INE_padron_10_17}
-\title{Poblacion PADRON INE (SPAIN) 210-2017}
+\title{Poblacion PADRON INE (SPAIN) 2010-2017}
 \format{A data frame with 1.219.020 registros and 13 variables:
 \itemize{
 \item X1: Microdato original
@@ -27,7 +27,7 @@
 INE_padron_10_17
 }
 \description{
-CPoblacion PADRON INE (SPAIN) 210-2017
+Poblacion PADRON INE (SPAIN) 2010-2017
 1.219.020 registros
 13 variables
 }

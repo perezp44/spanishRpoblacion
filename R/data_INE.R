@@ -1,8 +1,8 @@
 #------------------------------ This file documents INE datasets
 
-#' Poblacion PADRON INE (SPAIN) 210-2017
+#' Poblacion PADRON INE (SPAIN) 2010-2017
 #'
-#' CPoblacion PADRON INE (SPAIN) 210-2017
+#' Poblacion PADRON INE (SPAIN) 2010-2017
 #' 1.219.020 registros
 #' 13 variables
 #'
@@ -31,4 +31,36 @@
 #' }
 #'
 "INE_padron_10_17"
+
+
+
+#' Poblacion de MUNICIPIOS PADRON INE (SPAIN) 2010-2017
+#'
+#' Poblacion de los MUNICIPIOS: PADRON INE (SPAIN) 2010-2017
+#' 64.948 registros
+#' 8 variables
+#'
+#' @source \url{http://www.ine.es}
+#'
+#' @format A data frame with 64.948 registros and 8 variables:
+#' \itemize{
+#'   \item INECodMuni: PANCRUDO = 44177
+#'   \item Code_Unidad_poblacional: Pancrudo = 44177000000
+#'   \item Nombre_Unidad_poblacional: PANCRUDO
+#'   \item Provincia: PANCRUDO esta en Teruel = 44
+#'   \item Municipio: Codigo INE municipio Pancrudo = 177
+#'   \item anyo: periodo
+#'   \item Poblacion_Total: Poblacion Total
+#'   \item Poblacion_H: Hombres
+#'   \item Poblacion_M: Mujeres
+#' }
+#'
+#' @examples
+#' \dontrun{
+#'  df <- INE_padron_10_17_muni
+#'  df_2017 <- df %>% filter(anyo == 2017)
+#' }
+#'
+"INE_padron_10_17_muni"
+
 

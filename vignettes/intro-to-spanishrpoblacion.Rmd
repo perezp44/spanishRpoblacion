@@ -15,11 +15,19 @@ knitr::opts_chunk$set(
   comment = "#>", message = FALSE, warning = FALSE
 )
 ```
-
 # spanishRpoblacion
 
 Es un paquete de datos. Simplemente contiene los datos de población del Padrón. Están sacados del INE. Concretamente de [aquí](http://www.ine.es/nomen2/ficheros.do)
 Así que los datos en realidad provienen del  **[Nomenclátor: Población del Padrón Continuo por Unidad Poblacional](http://www.ine.es/nomen2/index.do)**. Me bajé los ficheros de los años 2010 a 2017, ambos incluidos.
+
+
+Contiene dos df de datos:
+
+  - `INE_padron_10_17` tiene toda la información original del INE (microdato) y las variables debidamente recuperadas, entre ellas la población total, de hombres y de mujeres
+
+  - `INE_padron_10_17_muni` he quitado algunas columnas, y además **sólo tiene datos de los municipios** (no de entidades etc...); ademas, para facilitar su uso con otros datos del INE he creado la variable `INECodMuni`, es el código más habitualmente utilizado. Es un código con 5 cifras, las 2 primeras para la provincia y tres para el municipio.
+
+
 
 
 # Información
