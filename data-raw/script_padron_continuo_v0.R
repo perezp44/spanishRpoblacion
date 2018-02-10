@@ -60,18 +60,33 @@ df <- df %>% mutate(TIPO = if_else(Entidad_singular != "00", "Entidad singular",
 df <- df %>% mutate(TIPO = if_else(Nucleo_o_diseminado != "00" & Nucleo_o_diseminado != "99", "Nucleos", TIPO))    #- Nucleos
 df <- df %>% mutate(TIPO = if_else(str_detect(Code_unidad_poblacional, "(99)$"), "Diseminados", TIPO))             #- Diseminados
 
+#- Las 3 series de poblacion a numeric
+df <- df %>% mutate(Poblacion_Total = as.integer(Poblacion_Total))
+df <- df %>% mutate(Poblacion_H = as.integer(Poblacion_H))
+df <- df %>% mutate(Poblacion_M = as.integer(Poblacion_M))
+
 #- reordeno las variables
 INE_padron_10_17 <- df %>% select(Municipio, Provincia, Nombre_unidad_poblacional, TIPO, anyo, Poblacion_Total, Poblacion_H, Poblacion_M, everything())
 
-# use_data(INE_padron_10_17) #- lo guarde con esta linea que usa el pkg usethis el 2018-02-06
+
+# use_data(INE_padron_10_17, overwrite = TRUE) #- lo guarde con esta linea que usa el pkg usethis el 2018-02-09
 
 
 
+INE_padron_10_17_muni <- INE_padron_10_17 %>%
+  filter(TIPO == "Municipio") %>%
+  select(Nombre_unidad_poblacional,Provincia, Municipio, anyo, Poblacion_Total, Poblacion_H, Poblacion_M) %>%
+  mutate(INECodMuni = paste0(Provincia, Municipio)) %>%
+  select(INECodMuni, everything())
+
+
+# use_data(INE_padron_10_17_muni, overwrite = TRUE) #- lo guarde con esta linea que usa el pkg usethis el 2018-02-09
 
 
 
 #--------------- LO DE ABAJO YA SON CALCULOS
 #--------------- LO DE ABAJO YA SON CALCULOS no sse usan al guardar los datos en el pkg
+#--------------- LO DE ABAJO YA SON CALCULOS
 
 
 
