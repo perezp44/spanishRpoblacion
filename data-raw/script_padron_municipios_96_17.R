@@ -75,8 +75,17 @@ df <- left_join(df, capitales, by = "INECodMuni") %>%
   mutate(Capital_prov = if_else(is.na(Capital_prov), 0, 1) )
 
 # Comprobaciones ------------------------------------------------------------------------------------
-aa <- names_v_df_pjp(df)  #- OK numeric etc....
 df <- df %>% map(str_trim, side = "both") %>% as_tibble() #- quito espacios en blanco, puede q haya
+df <- df %>% mutate(Pob_T = as.integer(Pob_T))
+df <- df %>% mutate(Pob_H = as.integer(Pob_H))
+df <- df %>% mutate(Pob_M = as.integer(Pob_M))
+df <- df %>% mutate(anyo = as.integer(anyo))
+df <- df %>% mutate(Capital_prov = as.integer(Capital_prov))
+
+
+
+aa <- names_v_df_pjp(df)  #- OK numeric etc....
+
 INE_padron_muni_96_17 <- df
 
 
