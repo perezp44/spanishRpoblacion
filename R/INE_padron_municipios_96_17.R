@@ -21,7 +21,7 @@
 #'   \item INECodCCAA: Codigo INE para la C.A., 2 digitos
 #'   \item NombreCCAA: Nombre de la C.A.
 #'   \item NombreProv: Nombre de la provincia
-#'   \item Capital_prov: 1 = municipio capital de provincia
+#'   \item capital_prov: 1 = municipio capital de provincia
 #' }
 #'
 #' @examples

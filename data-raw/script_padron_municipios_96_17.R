@@ -83,6 +83,11 @@ df <- df %>% mutate(anyo = as.integer(anyo))
 df <- df %>% mutate(Capital_prov = as.integer(Capital_prov))
 
 
+# Renaming capital -----------------------------------------------------------------------------------
+df <- df %>% rename(capital_prov = Capital_prov)
+
+
+
 
 aa <- names_v_df_pjp(df)  #- OK numeric etc....
 

@@ -11,9 +11,9 @@
 \item Code_Unidad_poblacional: Codigo de entidades, 11 digitos (Pancrudo = 44177000000)
 \item Nombre_Unidad_poblacional: PANCRUDO (estaba en mayusculas)
 \item anyo: periodo (de 2010 a 2017)
-\item Poblacion_Total: Poblacion Total
-\item Poblacion_H: Hombres
-\item Poblacion_M: Mujeres
+\item Pob_T: Poblacion Total
+\item Pob_H: Poblacion Hombres
+\item Pob_M: Pobalcion Mujeres
 \item TIPO: Municipios, Entidad Singular, Nucleos ....
 \item Entidad_colectiva: codigo de 2 digitos
 \item Entidad_singular: codigo de 2 digitos
@@ -21,7 +21,7 @@
 \item INECodCCAA: Codigo INE para la C.A., 2 digitos
 \item NombreCCAA: Nombre de la C.A.
 \item NombreProv: Nombre de la provincia
-\item Capital_prov: 1 = municipio capital de provincia
+\item capital_prov: 1 = municipio capital de provincia
 }}
 \source{
 \url{http://www.ine.es}

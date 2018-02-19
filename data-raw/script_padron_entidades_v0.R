@@ -99,6 +99,12 @@ df <- df %>% mutate(Poblacion_M = as.integer(Poblacion_M))
 df <- df %>% mutate(anyo = as.integer(anyo))
 df <- df %>% mutate(Capital_prov = as.integer(Capital_prov))
 
+# Renaming pob --------------------------------------------------------------------------------------
+df <- df %>% rename(Pob_T = Poblacion_Total)
+df <- df %>% rename(Pob_H = Poblacion_H)
+df <- df %>% rename(Pob_M = Poblacion_M)
+df <- df %>% rename(capital_prov = Capital_prov)
+
 
 
 aa <- names_v_df_pjp(df)  #- OK numeric etc....
